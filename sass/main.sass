@@ -1,0 +1,425 @@
+$baseWidth: 960px
+
+
+%cross
+  position: absolute
+  top: 10px
+
+%for-a
+  text-decoration: none
+  color: inherit
+  position: relative
+
+%for-pseudoel
+  content: ""
+  position: absolute
+  visibility: hidden
+  height: 3px
+  width: 20px
+  top: 105%
+  transition: .5s
+
+body
+  padding-left: 61px
+
+header
+  margin-top: 25px
+  height: 106px
+  margin-bottom: 23px
+  padding-bottom: 20px
+  width: $baseWidth
+  border-bottom: 1px solid black
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+.thirst_header_item
+  width: 124px
+  background: rgb(119,119,119)
+
+.second_header_item
+  width: 280px
+  background: rgb(119,119,119)
+
+
+.third_header_item
+  display: flex
+  align-items: flex-end
+  flex-flow: column
+  width: 514px
+  background: rgb(119,119,119)
+  padding: 10px
+  box-sizing: border-box
+
+.third_header_item p
+  margin:
+    top: 5px
+    bottom: 0px
+
+.flex
+  display: flex
+  align-items: flex-end
+  flex-flow: column
+
+.container
+  display: flex
+  width: $baseWidth
+  padding-bottom: 20px
+  height: 795px
+  border-bottom: 1px solid black
+  box-sizing: border-box
+
+.leftPart
+  display: flex
+  margin-right: 20px
+  flex-direction: column
+  justify-content: space-between
+
+.main_menu
+  background: rgb(119,119,119)
+  height: 335px
+  width: 185px
+  padding-left: 15px
+  box-sizing: border-box
+
+  ul
+    list-style: none
+    color: white
+    padding-left: 0
+    margin-top: 3px
+    line-height: 1.3
+
+
+    li
+      &:hover a
+        &:before
+          transform: translateX(100%)
+          visibility: visible
+          width: 50%
+
+      &:hover a
+        &:after
+          transform: translateX(-100%)
+          visibility: visible
+          width: 50%
+
+      a
+        @extend %for-a
+
+        &:after
+          @extend %for-pseudoel
+          background: #ffd800
+          right: 0
+
+        &:before
+          @extend %for-pseudoel
+          background: rgb(220,220,220)
+          left: 0
+
+.h3flex
+  color: white
+  margin-bottom: 3px
+  padding-bottom: 0
+
+.bottom_leftCont
+  background: rgb(119,119,119)
+  width: 185px
+  height: 135px
+
+.commonPart
+  width: 755px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.flox
+  height: 100px
+
+.head
+  width: 100%
+  background: rgb(220,220,220)
+  height: 210px
+
+.square_storage
+  display: flex
+  flex-flow: wrap
+  justify-content: space-between
+
+.commonPart_bottom
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+.square
+  width: 132px
+  margin-bottom: 20px
+  background: rgb(220,220,220)
+  height: 150px
+
+
+
+.square
+
+  &:nth-child(even)
+    &:hover
+      transform: rotate(30deg)
+      background: #ffd800
+      transition: .11s
+
+  &:nth-child(odd)
+    &:hover
+      transform: rotate(-30deg)
+      background: #7d7f7d
+      transition: .11s
+
+
+.foot
+  padding: 15px
+  padding-right: 10px
+  font-size: 16px
+  box-sizing: border-box
+  width: 367px
+  height: 200px
+  background: rgb(220,220,220)
+
+.foot1
+  line-height: 1.4
+
+.foot2
+  text-transform: uppercase
+  font-size: 14px
+  line-height: 1.5
+  font-weight: bold
+
+footer
+  display: flex
+  justify-content: space-between
+  height: 230px
+  width: $baseWidth
+  box-sizing: border-box
+  padding-top: 25px
+  padding-bottom: 25px
+  flex-wrap: wrap
+
+.footer_cont
+  background: rgb(119,119,119)
+  color: white
+
+.menu
+  width: 300px
+  box-sizing: border-box
+  padding-top: 15px
+
+  ul
+    margin-top: 0
+    column-gap: 0px
+    column-count: 2
+    list-style: none
+    width: 260px
+    padding-left: 25px
+
+    li
+      margin-bottom: 5px
+      line-height: 1.1
+
+      a
+        @extend %for-a
+
+.footer_2
+  width: 300px
+  ul
+    list-style: square
+    padding-left: 43px
+    li
+      margin-bottom: 4.2px
+      a
+        @extend %for-a
+
+.footer_3
+  width: 310px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+.footer_column
+  height: 75px
+
+@media (max-width: 1050px)
+
+  body
+    padding-left: 10px
+
+@media (min-width: 1000px)
+
+  .container
+    width: 100%
+
+  .square_storage
+    justify-content: flex-start
+
+  .square
+    margin-left: 23.75px
+
+  .square
+    &:nth-child(1)
+      margin-left: 0
+    &:nth-child(6)
+      margin-left: 0
+
+  .bottom_leftCont
+    display: flex
+    align-self: flex-end
+
+@media (max-width: 768px)
+
+  %fftn
+    width: 45%
+    margin-bottom: 10px
+
+  header
+    height: auto
+    width: auto
+
+  .thirst_header_item
+    height: 106px
+    margin-bottom: 10px
+
+  .second_header_item
+    min-height: 100px
+    margin-bottom: 10px
+
+  .third_header_item
+    width: 100%
+
+  .container
+    flex-direction: column
+    height: auto
+    width: 100%
+
+  .commonPart
+    width: 100%
+
+  .head
+    margin-bottom: 10px
+    width: 100%
+
+  .commonPart
+    margin-bottom: 20px
+
+  .leftPart
+    flex-direction: column
+    width: 100%
+    align-items: center
+
+  .main_menu
+    height: auto
+    width: 100%
+    margin-bottom: 5px
+
+  .bottom_leftCont
+    margin-bottom: 5px
+
+  .main_menu ul
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+
+  .main_menu ul li
+    margin-right: 8px
+
+
+  .foot
+    height: auto
+
+  footer
+    width: 100%
+    height: auto
+
+  .menu
+    @extend %fftn
+
+  .footer_2
+    @extend %fftn
+
+  .footer_3
+    width: 100%
+
+  .footer_column
+    margin-bottom: 10px
+
+@media (max-width: 584px)
+
+  .main_menu ul
+    flex-direction: column
+
+
+  .second_header_item
+    width: 100%
+
+  .menu
+    width: 100%
+
+  .footer_2
+    width: 100%
+
+@media (max-width: 414px)
+
+  .commonPart_bottom
+    flex-wrap: wrap
+
+  .commonPart_bottom,.foot
+    width: 100%
+
+
+  .main_menu
+    margin-right: 10px
+
+  .h3flex
+    display: flex;justify-content: space-around
+
+.humburger
+  display: flex
+  flex-direction: column
+  width: 50px
+  position: relative
+
+.line
+  width: 100%
+  border-top: 1px solid black
+  margin-bottom: 10px
+
+.humburger_hide
+  display: none
+
+@media (max-width: 584px)
+
+  .humburger_hide
+    display: block
+  .main_menu ul
+    display: none
+
+
+.cross
+  transform: rotate(45deg)
+  @extend %cross
+
+.cross2
+  transform: rotate(-45deg)
+  @extend %cross
+
+
+.hide
+  display: none
+
+.fixed
+  position: fixed
+  width: 80%
+  height: auto
+  top: 20px
+
+.fixedMenu
+  position: fixed
+  top: 20px
+
+
+.flexend
+ justify-content: flex-end
