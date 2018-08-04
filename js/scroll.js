@@ -2,6 +2,7 @@
 window.onscroll=function () {
 
 var menu=document.querySelector('.main_menu');
+var cont = document.querySelector('.leftPart');
  var menuQuardinats = menu.getBoundingClientRect().bottom;
 
 
@@ -38,11 +39,13 @@ var menu=document.querySelector('.main_menu');
   if (window.pageYOffset>menuQuardinats) {
 
     menu.classList.add('fixedMenu');
+    cont.classList.add('flexend');
 
   }
   if (window.pageYOffset<menuQuardinats) {
 
     menu.classList.remove('fixedMenu');
+  cont.classList.remove('flexend');
 
   }
 

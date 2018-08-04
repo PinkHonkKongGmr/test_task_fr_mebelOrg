@@ -258,7 +258,9 @@ padding-top: 15px;
   {margin-left: 0;}
 
   .bottom_leftCont
-  {align-self: flex-end;}
+  {display: flex;align-self: flex-end;}
+
+
 
 
 
@@ -412,3 +414,7 @@ height:auto;top:20px;}
 
 .fixedMenu
 {position: fixed;top:20px;}
+
+
+.flexend
+{justify-content: flex-end;}
