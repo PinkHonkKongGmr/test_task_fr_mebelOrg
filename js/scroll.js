@@ -4,6 +4,8 @@ window.onscroll=function () {
 var menu=document.querySelector('.main_menu');
 var cont = document.querySelector('.leftPart');
  var menuQuardinats = menu.getBoundingClientRect().bottom;
+ var hdq = document.querySelector('.container').getBoundingClientRect().top;
+ var btlc = document.querySelector('.bottom_leftCont');
 
 
 
@@ -14,17 +16,6 @@ var cont = document.querySelector('.leftPart');
 
 
 
- if (window.pageYOffset>200) {
-
-
-      for (var i = 0; i < nope.length; i++) {
-        nope[i].classList.add('hide');
-      }
-
-     phone.classList.add('fixed');
-
-
-  }
 
    if (window.pageYOffset==0) {
 
@@ -41,8 +32,16 @@ var cont = document.querySelector('.leftPart');
     menu.classList.add('fixedMenu');
     cont.classList.add('flexend');
 
+  for (var i = 0; i < nope.length; i++)
+   {nope[i].classList.add('hide');}
+
+         phone.classList.add('fixed');
+
+
   }
-  if (window.pageYOffset<menuQuardinats) {
+  if (window.pageYOffset<hdq
+    // ||menu.getBoundingClientRect().bottom>btlc.getBoundingClientRect().bottom-50
+  ) {
 
     menu.classList.remove('fixedMenu');
   cont.classList.remove('flexend');
