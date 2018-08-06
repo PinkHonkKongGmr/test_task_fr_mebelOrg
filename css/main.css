@@ -400,8 +400,10 @@ footer {
 
 .line {
   width: 100%;
-  border-top: 1px solid black;
+  border-top: 4px solid black;
   margin-bottom: 10px;
+  border-radius: 20px;
+
 }
 
 .humburger_hide {
@@ -419,10 +421,13 @@ footer {
 
 .cross {
   transform: rotate(45deg);
+  transition: .5s;
 }
 
 .cross2 {
+
   transform: rotate(-45deg);
+    transition: .6s;
 }
 
 .hide {
