@@ -99,13 +99,15 @@ header {
 }
 
 .main_menu ul li:hover a:before {
-  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
   visibility: visible;
   width: 50%;
 }
 
 .main_menu ul li:hover a:after {
-  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
   visibility: visible;
   width: 50%;
 }
@@ -169,13 +171,15 @@ header {
 }
 
 .square:nth-child(even):hover {
-  transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
   background: #ffd800;
   transition: .3s;
 }
 
 .square:nth-child(odd):hover {
-  transform: rotate(-30deg);
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
   background: #7d7f7d;
   transition: .3s;
 }
@@ -225,8 +229,10 @@ footer {
 
 .menu ul {
   margin-top: 0;
-  column-gap: 0px;
-  column-count: 2;
+  -webkit-column-gap: 0px;
+          column-gap: 0px;
+  -webkit-column-count: 2;
+          column-count: 2;
   list-style: none;
   width: 260px;
   padding-left: 25px;
@@ -420,13 +426,16 @@ footer {
 }
 
 .cross {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   transition: .5s;
 }
 
 .cross2 {
 
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+
+          transform: rotate(-45deg);
     transition: .6s;
 }
 
@@ -449,3 +458,5 @@ footer {
 .flexend {
   justify-content: flex-end;
 }
+
+/*# sourceMappingURL=main.css.map */
